@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="unocss/unocss.css">
+    <script src="unocss/unocss.js"></script>
+</head>
+
+<body>
+    <nav class="bg-#55D7F1 shadow-md shadow-neutral-700">
+        <div class="w-5/6 flex items-center mx-auto h-80px">
+            <a class="font-bold text-32px mx-auto lg:mx-0" href="#">Metronix</a>
+            <div id="navMenu" class="absolute hidden lg:static lg:flex flex-col top-80px left-0 w-full lg:w-fit lg:flex-row lg:ml-auto lg:items-center gap-10px">
+                <a href="#" class="px-3 py-2 duration-200 hover:bg-#104bc1 hover:text-white rounded-md">Beranda</a>
+                <a href="#" class="px-3 py-2 duration-200 hover:bg-#104bc1 hover:text-white rounded-md">Produk</a>
+                <a href="#" class="px-3 py-2 duration-200 hover:bg-#104bc1 hover:text-white rounded-md">Blog</a>
+                <a href="#" class="px-3 py-2 duration-200 hover:bg-#104bc1 hover:text-white rounded-md">Kontak</a>
+                <a href="#" class="px-3 py-2 duration-200 hover:bg-#104bc1 hover:text-white rounded-md">Tentang Kami</a>
+            </div>
+            <button id="menuToggle" class="block lg:hidden px-4 py-2 bg-#00288f text-white">Menu</button>
+        </div>
+    </nav>
+
+    <script>
+        var navMenu = document.getElementById('navMenu')
+        var menuToggle = document.getElementById('menuToggle')
+
+        menuToggle.onclick = () => {
+            if(navMenu.classList.contains('hidden')) {
+                navMenu.classList.remove('hidden')
+                navMenu.classList.add('flex')
+            }else {
+                navMenu.classList.remove('flex')
+                navMenu.classList.add('hidden')
+            }
+        }
+    </script>
+</body>
+
+</html>
